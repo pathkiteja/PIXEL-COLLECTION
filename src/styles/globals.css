@@ -1,0 +1,16 @@
+/* Add to the end of your globals.css file */
+
+/* Swiper Customization */
+.swiper-slide-thumb-active {
+  border-color: #9333ea !important; /* Purple-600 color */
+  opacity: 1;
+}
+
+.thumbs-swiper .swiper-slide {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.thumbs-swiper .swiper-slide:hover {
+  opacity: 1;
+}

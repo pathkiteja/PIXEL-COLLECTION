@@ -1,26 +1,123 @@
 @import "tailwindcss";
 
+/* Your custom CSS can go here */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
+
+/* Add font-face declaration to ensure the font is loaded properly */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/pressstart2p/v14/e3t4euO8T-267oIAQAu6jDQyK3nVivM.woff2') format('woff2');
+  font-display: swap;
+}
+
+
+/* Custom scrollbar for retro feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6d28d9;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5b21b6;
+}
+
+/* Pixel art animation */
+@keyframes pixel-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pixel-animate {
+  animation: pixel-fade 0.5s ease-out forwards;
+}
+
+/* Custom focus styles */
+*:focus-visible {
+  outline: 2px solid #6d28d9;
+  outline-offset: 2px;
+}
+
+/* Line clamp utilities */
+.line-clamp-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+/* Special buttons for retro game feel */
+.btn-retro {
+  font-family: 'Press Start 2P', system-ui, sans-serif;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1.25rem;
+  display: inline-block;
+  position: relative;
+  transition: all 200ms ease-in-out;
+  background-image: linear-gradient(to right, #9333ea, #4f46e5);
+  box-shadow: 0 4px 0 #4527a0;
+}
+
+.btn-retro:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #4527a0;
+}
+
+.btn-retro:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #4527a0;
+}
+
+/* 8bit style border */
+.border-pixel {
+  box-shadow:
+    0 -4px 0 0 black,
+    0 4px 0 0 black,
+    -4px 0 0 0 black,
+    4px 0 0 0 black,
+    -4px -4px 0 0 black,
+    4px -4px 0 0 black,
+    -4px 4px 0 0 black,
+    4px 4px 0 0 black;
 }
