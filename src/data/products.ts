@@ -109,8 +109,8 @@ export const products: Product[] = [
     price: 49.99,
     images: [
       'https://images.unsplash.com/photo-1569017388730-020b5f80a004?q=80&w=800',
-      'https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=800',
-      'https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?q=80&w=800',
+      'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800',
+      'https://images.unsplash.com/photo-1551103782-8ab07afd45c1?q=80&w=800'
     ],
     category: 'gaming',
     featured: true,
@@ -123,7 +123,7 @@ export const products: Product[] = [
     description: 'Experience the vibrant aesthetic of 80s retrowave with this stunning pixel art cityscape. The neon-soaked sunset creates a dramatic backdrop for the silhouetted skyline, perfect for anyone who loves synthwave and retro futuristic art.',
     price: 59.99,
     images: [
-      'https://images.unsplash.com/photo-1604334104107-a2ea3c2a9b8a?q=80&w=800',
+      'https://www.bing.com/th/id/OIP.PoToEvby1yw2vVrVxtEAygHaEK?w=202&h=106&c=8&rs=1&qlt=90&o=6&dpr=1.4&pid=3.1&rm=2',
       'https://images.unsplash.com/photo-1569017388730-020b5f80a004?q=80&w=800',
     ],
     category: 'landscapes',

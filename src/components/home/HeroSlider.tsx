@@ -40,14 +40,14 @@ export default function HeroSlider() {
       id: 'slide-3',
       title: 'Space Explorer Series',
       subtitle: 'Journey Through The Cosmos',
-      image: 'https://images.unsplash.com/photo-1636642491825-9eb73016bed2?q=80&w=1000',
+      image: 'https://st2.depositphotos.com/1011081/10383/i/450/depositphotos_103834122-stock-photo-universe-scene-with-planets-stars.jpg',
       link: '/product/pixel-art-10',
     },
     {
       id: 'slide-4',
       title: 'Pixel City Skyline',
       subtitle: 'Urban Landscapes Reimagined',
-      image: 'https://images.unsplash.com/photo-1604334104107-a2ea3c2a9b8a?q=80&w=1000',
+      image: 'https://img.freepik.com/free-photo/8-bit-graphics-pixels-scene-with-city-sunset_23-2151120968.jpg?w=740',
       link: '/product/pixel-art-6',
     },
   ];
@@ -64,17 +64,23 @@ export default function HeroSlider() {
         }}
         loop={true}
         effect="fade"
-        className="w-full h-full"
+        className="w-full h-full swiper-container-fix"
+        style={{ zIndex: 1 }} // Ensure proper stacking
       >
         {sliderItems.map((slide) => (
-          <SwiperSlide key={slide.id} className="relative">
+          <SwiperSlide
+            key={slide.id}
+            className="swiper-slide-fix" // Ensure proper slide styling
+          >
             <div className="relative w-full h-full">
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10" />
-              <img
+              <Image
                 src={slide.image}
                 alt={slide.title}
                 fill
-                className="object-cover"
+                className="object-cover w-full h-full" // Ensure image fills the container
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                quality={100}
                 priority
               />
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-12 z-20 text-white">
@@ -96,6 +102,26 @@ export default function HeroSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
+      <style jsx>{`
+        .swiper-container-fix {
+          position: relative;
+          overflow: hidden;
+          z-index: 1; /* Ensure Swiper container is properly layered */
+        }
+
+        .swiper-slide-fix {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%; /* Ensure slides take full width */
+          height: 100%; /* Ensure slides take full height */
+          z-index: 1; /* Ensure slides are properly layered */
+        }
+
+        .object-cover {
+          object-fit: cover; /* Ensure image covers the container */
+        }
+      `}</style>
     </div>
   );
 }

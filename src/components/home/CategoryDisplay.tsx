@@ -28,9 +28,8 @@ export default function CategoryDisplay() {
               <div className="relative h-64 w-full overflow-hidden">
                 <img
                   src={category.image}
-                  fill
                   alt={category.name}
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition-all duration-300" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
