@@ -26,7 +26,7 @@ A modern marketplace for pixel art collectibles built with Next.js 13+ and TypeS
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/pixel-collectives.git
+git clone https://github.com/pathkiteja/PIXEL-COLLECTION.git
 cd pixel-collectives
 ```
 
@@ -101,7 +101,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/pixel-collectives/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/pathkiteja/PIXEL-COLLECTION/issues).
 
 ## 💖 Support
 
@@ -109,6 +109,6 @@ Give a ⭐️ if this project helped you!
 
 ## 📞 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter) - email@example.com
+Kiteja - email@example.com
 
-Project Link: [https://github.com/yourusername/pixel-collectives](https://github.com/yourusername/pixel-collectives)
+Project Link: [https://github.com/pathkiteja/PIXEL-COLLECTION](https://github.com/pathkiteja/PIXEL-COLLECTION)
